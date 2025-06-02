@@ -75,7 +75,7 @@ ENTRYPOINT ["java", "-cp", "bin/bootstrap.jar:bin/tomcat-juli.jar", "-Djava.secu
  kubectl apply -f k8s/petshop-service.yaml
 
 ## Then access the app at:
-http://<NodeIP>:30080/jpetstore
+http://65.2.4.210:8080/jpetstore/
 
 ## Security Tools Integrated
  Tool            Purpose                            

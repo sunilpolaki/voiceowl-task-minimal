@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: petshop-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: petshop
+  template:
+    metadata:
+      labels:
+        app: petshop
+    spec:
+      containers:
+      - name: petshop
+        image: devopsvmr/petshop:latest
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: petshop-config
+        - secretRef:
+            name: petshop-secrets

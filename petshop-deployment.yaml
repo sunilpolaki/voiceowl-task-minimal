@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: petshop
-        image: devopsvmr/petshop:latest
+        image: docker pull sunilpolaki/voiceowltask:1
         ports:
         - containerPort: 8080
         envFrom:
